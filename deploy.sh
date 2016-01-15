@@ -3,7 +3,7 @@
 set -o errexit #abort if any command fails
 clear
 
-if  git commit | grep 'nothing to commit'
+if  git commit | grep -q 'nothing to commit'
     then 
         echo "Found" 
     else 
