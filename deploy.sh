@@ -1,11 +1,11 @@
-
 #!/usr/bin/env bash
 set -o errexit #abort if any command fails
-clear
 
-if  git commit | grep -q 'nothing to commit'
-    then 
-        echo "Found" 
-    else 
-        echo "Not found" 
+if git commit
+    then
+        echo "Please enter a git commit message: "
+        read message
+        git commit -m $message
+    else
+        echo "Wrong."
 fi;
