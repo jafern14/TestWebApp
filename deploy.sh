@@ -45,8 +45,9 @@ find "$DIRS" \( -name .git -o -name '*.git' \) -type d | \
 gulp
 git add -f .tmp/*
 git add -A
-clear
+echo
 echo "Please enter a commit message:"
 read MESSAGE
+echo
 git commit -m "$MESSAGE"
 git push
