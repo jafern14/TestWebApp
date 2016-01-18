@@ -17,7 +17,7 @@ if $STATUS | grep -q "Changes not staged for commit"
                 echo
                 git status
         fi;
-elif [ "$STATUS" | grep -q "nothing to commit" && "$STATUS" | grep -q "branch is ahead" ]
+elif [ "$STATUS" | grep -q "nothing to commit" ] && [ "$STATUS" | grep -q "branch is ahead" ]
     then
         echo "Please enter a git commit message: "
         read message
