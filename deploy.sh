@@ -17,7 +17,7 @@ if $STATUS | grep -q "Changes not staged for commit"
                 echo
                 git status
         fi;
-elif $STATUS | grep -q "Changes to be committed"
+elif $STATUS | grep -q "nothing to commit"
     then
         echo "Please enter a git commit message: "
         read message
