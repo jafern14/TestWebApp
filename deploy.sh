@@ -17,11 +17,11 @@ if $STATUS | grep -q "Changes not staged for commit"
                 echo
                 git status
         fi;
-elif $STATUS | grep -q "nothing to commit" && $STATUS | grep -q "branch is ahead"
+elif $STATUS | grep -q "Changes to be committed"
     then
-        echo "Please enter a git commit message: "
-        read message
-        git commit -m $message
-else
+        echo "Please enter a git commit message: " 
+        read MESSAGE
+        git commit -m "$MESSAGE"
+else 
     echo "Wrong."
 fi;
