@@ -11,6 +11,7 @@ if $STATUS | grep -q "Changes not staged for commit"
                 echo "Please enter a commit message: "
                 read -e MESSAGE
                 git commit -m "$MESSAGE"
+                git push
             else
                 clear
                 echo "Please review the following status and fix the pending items to be committed. "
@@ -22,6 +23,7 @@ elif $STATUS | grep -q "Changes to be committed"
         echo "Please enter a git commit message: " 
         read MESSAGE
         git commit -m "$MESSAGE"
+        git push
 else 
-    echo "Wrong."
+    git push
 fi;
