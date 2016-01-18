@@ -1,7 +1,5 @@
 // bower:scss
 // endbower
-@import 'node-bourbon';
-@import 'node-neat';
 @import 'topnav';
 
 body {
@@ -33,55 +31,3 @@ body {
   padding: 0.2em 0;
 }
  
-
-#main{
-    @include outer-container();
-}
-
-#top-row{
-    @include span-columns(12);
-}
-
-#middle-row{
-    @include span-columns(12);
-}
-#bottom-row{
-    @include span-columns(12);
-}
-
-#red{
-
-    @include span-columns(4 of 12);
-}
-
-#orange{
-    background-color: orange;
-    @include span-columns(4 of 12);
-}
-
-#yellow{
-    background-color: yellow;
-    @include span-columns(4 of 12);
-}
-
-#green{
-    background-color: green;
-    @include span-columns(4 of 12);
-}
-
-#blue{
-    background-color: blue;
-    @include span-columns(8 of 12);
-}
-
-#indigo{
-    background-color: indigo;
-    @include span-columns(4 of 12);
-    @include shift(8 of 12);
-}
-
-#red, #orange, #yellow{
-    @media screen and (max-width: 768px){
-        @include span-columns(12 of 12);
-    }
-}
