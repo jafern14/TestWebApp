@@ -5,16 +5,17 @@ if $STATUS | grep -q "Changes not staged for commit"
     then
         echo "The are changes that are not staged for commit. Are you sure you would like to ignore the changes and continue commiting? (y/n) "
         read ANSWER
-        if $ANSWER -eq "y"
+        if [ "$ANSWER" == "y" ]
             then
+                clear
                 echo "Please enter a commit message: "
-                read MESSAGE
-                git commit -m $MESSAGE
+                read -e MESSAGE
+                git commit -m "$MESSAGE"
             else
                 clear
                 echo "Please review the following status and fix the pending items to be committed. "
                 echo
-                echo 'git status'
+                git status
         fi;
 elif $STATUS | grep -q "Changes to be committed"
     then
